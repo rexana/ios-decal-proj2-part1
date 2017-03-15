@@ -12,6 +12,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var feedTable: UITableView!
     var imageToShow: UIImage?
+    var currRow: Int?
+    var currSection: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feedViewCell", for: indexPath) as! feedViewCell
-        cell.readStatusImage.image = UIImage(named: "unread")
+        if cell.isUnread! {
+            cell.readStatusImage.image = UIImage(named: "unread")
+        } else {
+            cell.readStatusImage.image = UIImage(named: "read")
+        }
         cell.senderNameLabel.text = "Rexana"
         cell.timeReceivedLabel.text = "1 min"
         return cell
@@ -48,11 +54,19 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         imageToShow = threads[threadNames[indexPath.section]]?[indexPath.row]
+        currRow = indexPath.row
+        currSection = indexPath.section
+        let cell = feedTable.cellForRow(at: indexPath as IndexPath) as! feedViewCell
+        if cell.isUnread! {
+            performSegue(withIdentifier: "feedToImage", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? ImageViewController {
             dest.image = imageToShow
+            dest.row = currRow
+            dest.section = currSection
         }
     }
     

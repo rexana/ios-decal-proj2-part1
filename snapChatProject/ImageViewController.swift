@@ -12,6 +12,8 @@ class ImageViewController: UIViewController {
 
     @IBOutlet var imageButton: UIButton!
     var image: UIImage?
+    var row: Int?
+    var section: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,14 @@ class ImageViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        navigationController?.isNavigationBarHidden = false
+        tabBarController?.tabBar.isHidden = false
+        if let dest = segue.destination as? FeedViewController {
+            let indexPath = NSIndexPath(row: row!, section: section!)
+            let cell = dest.feedTable.cellForRow(at: indexPath as IndexPath) as! feedViewCell
+            cell.readStatusImage.image = UIImage(named: "read")
+            cell.isUnread = false
+        }
     }
 
     /*

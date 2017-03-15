@@ -13,10 +13,12 @@ class feedViewCell: UITableViewCell {
     @IBOutlet weak var readStatusImage: UIImageView!
     @IBOutlet weak var senderNameLabel: UILabel!
     @IBOutlet weak var timeReceivedLabel: UILabel!
+    var isUnread: Bool?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        isUnread = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

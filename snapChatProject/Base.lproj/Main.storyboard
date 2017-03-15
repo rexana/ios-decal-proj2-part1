@@ -111,7 +111,6 @@
                                             <outlet property="readStatusImage" destination="Y1b-pq-BY9" id="YCm-K4-LiC"/>
                                             <outlet property="senderNameLabel" destination="yOh-Ok-XpG" id="3L5-P6-axR"/>
                                             <outlet property="timeReceivedLabel" destination="Cec-x2-V0Y" id="YPg-Hq-uEb"/>
-                                            <segue destination="IDv-ei-Rtb" kind="showDetail" identifier="feedToImage" action="showViewController:sender:" id="ncH-Ho-BKH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -128,6 +127,7 @@
                     <navigationItem key="navigationItem" id="XT4-OU-ywp"/>
                     <connections>
                         <outlet property="feedTable" destination="2CL-99-Egn" id="vG1-1g-N8R"/>
+                        <segue destination="IDv-ei-Rtb" kind="showDetail" identifier="feedToImage" id="SzG-Kt-qip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bP-xV-oph" userLabel="First Responder" sceneMemberID="firstResponder"/>

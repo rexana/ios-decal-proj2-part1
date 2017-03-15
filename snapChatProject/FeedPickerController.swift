@@ -41,8 +41,7 @@ class FeedPickerController: UIViewController, UITableViewDataSource, UITableView
     
     @IBAction func goButtonWasPressed(_ sender: UIButton) {
         if let labelText = selectedFeedLabel.text {
-            threads[labelText]!.append(image!) // This might be unwrapped wrong
-            print(threads)
+            threads[labelText]!.append(image!)
             let alertController = UIAlertController(title: "Snap sent!", message: "Your snap was posted to " + labelText, preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: {
                 (_)in
