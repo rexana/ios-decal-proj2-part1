@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18BD4B361E7881400083B93C /* FeedPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4B351E7881400083B93C /* FeedPickerController.swift */; };
+		18BD4B381E78828A0083B93C /* feedPickerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4B371E78828A0083B93C /* feedPickerTableCell.swift */; };
+		18BD4B3A1E7888690083B93C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4B391E7888690083B93C /* FeedViewController.swift */; };
+		18BD4B3C1E78C8A00083B93C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4B3B1E78C8A00083B93C /* ImageViewController.swift */; };
+		18BD4B3E1E78C8EE0083B93C /* feedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD4B3D1E78C8EE0083B93C /* feedViewCell.swift */; };
 		417986C31E6631020050E1DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 417986C21E6631020050E1DF /* Assets.xcassets */; };
 		417986C51E6632C40050E1DF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417986C41E6632C40050E1DF /* TabBarController.swift */; };
-		417986C91E664AE40050E1DF /* imageCollectionVieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417986C81E664AE40050E1DF /* imageCollectionVieCell.swift */; };
+		417986C91E664AE40050E1DF /* imageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417986C81E664AE40050E1DF /* imageCollectionViewCell.swift */; };
 		417986CB1E664CB60050E1DF /* ImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417986CA1E664CB60050E1DF /* ImageFlowLayout.swift */; };
 		4196F2CB1E6509E8009916E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4196F2CA1E6509E8009916E4 /* AppDelegate.swift */; };
 		4196F2D01E6509E8009916E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4196F2CE1E6509E8009916E4 /* Main.storyboard */; };
@@ -20,9 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18BD4B351E7881400083B93C /* FeedPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPickerController.swift; sourceTree = "<group>"; };
+		18BD4B371E78828A0083B93C /* feedPickerTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedPickerTableCell.swift; sourceTree = "<group>"; };
+		18BD4B391E7888690083B93C /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		18BD4B3B1E78C8A00083B93C /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		18BD4B3D1E78C8EE0083B93C /* feedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = feedViewCell.swift; sourceTree = "<group>"; };
 		417986C21E6631020050E1DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		417986C41E6632C40050E1DF /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		417986C81E664AE40050E1DF /* imageCollectionVieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageCollectionVieCell.swift; sourceTree = "<group>"; };
+		417986C81E664AE40050E1DF /* imageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageCollectionViewCell.swift; sourceTree = "<group>"; };
 		417986CA1E664CB60050E1DF /* ImageFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFlowLayout.swift; sourceTree = "<group>"; };
 		4196F2C71E6509E8009916E4 /* snapChatProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snapChatProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4196F2CA1E6509E8009916E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +75,9 @@
 		417986CE1E6657650050E1DF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				417986C81E664AE40050E1DF /* imageCollectionVieCell.swift */,
+				417986C81E664AE40050E1DF /* imageCollectionViewCell.swift */,
+				18BD4B371E78828A0083B93C /* feedPickerTableCell.swift */,
+				18BD4B3D1E78C8EE0083B93C /* feedViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -75,8 +87,11 @@
 			children = (
 				417986C41E6632C40050E1DF /* TabBarController.swift */,
 				4196F2EC1E6609B0009916E4 /* PostNavigationController.swift */,
-				417986CE1E6657650050E1DF /* Cells */,
 				4196F2E21E6514EE009916E4 /* ImagePickerController.swift */,
+				18BD4B351E7881400083B93C /* FeedPickerController.swift */,
+				18BD4B391E7888690083B93C /* FeedViewController.swift */,
+				18BD4B3B1E78C8A00083B93C /* ImageViewController.swift */,
+				417986CE1E6657650050E1DF /* Cells */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -183,12 +198,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BD4B3E1E78C8EE0083B93C /* feedViewCell.swift in Sources */,
+				18BD4B381E78828A0083B93C /* feedPickerTableCell.swift in Sources */,
 				417986CB1E664CB60050E1DF /* ImageFlowLayout.swift in Sources */,
+				18BD4B3A1E7888690083B93C /* FeedViewController.swift in Sources */,
 				4196F2E31E6514EE009916E4 /* ImagePickerController.swift in Sources */,
 				417986C51E6632C40050E1DF /* TabBarController.swift in Sources */,
-				417986C91E664AE40050E1DF /* imageCollectionVieCell.swift in Sources */,
+				18BD4B361E7881400083B93C /* FeedPickerController.swift in Sources */,
+				417986C91E664AE40050E1DF /* imageCollectionViewCell.swift in Sources */,
 				4196F2DD1E650ECA009916E4 /* ImageFeed.swift in Sources */,
 				4196F2CB1E6509E8009916E4 /* AppDelegate.swift in Sources */,
+				18BD4B3C1E78C8A00083B93C /* ImageViewController.swift in Sources */,
 				4196F2ED1E6609B0009916E4 /* PostNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

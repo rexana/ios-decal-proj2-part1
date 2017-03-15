@@ -11,6 +11,8 @@ import UIKit
 class ImagePickerController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet var imageCollectionView: UICollectionView!
+    var selectedImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imageCollectionView.collectionViewLayout = ImageFlowLayout.init()
@@ -24,8 +26,17 @@ class ImagePickerController: UIViewController, UICollectionViewDataSource, UICol
 
     func selectImage(_ image: UIImage) {
         //The image being selected is passed in as "image".
+        selectedImage = image
+        performSegue(withIdentifier: "imagePickerToFeedPicker", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? FeedPickerController {
+            dest.image = selectedImage
+        }
+    }
+    
+    @IBAction func unwindToImagePicker(segue: UIStoryboardSegue) {}
     
     
     //DON'T MODIFY CODE HERE AND BELOW!
@@ -36,12 +47,12 @@ class ImagePickerController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pickImageCell", for: indexPath) as! imageCollectionVieCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pickImageCell", for: indexPath) as! imageCollectionViewCell
         cell.image.image = allImages[indexPath.row]
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCell = collectionView.cellForItem(at: indexPath) as! imageCollectionVieCell
+        let selectedCell = collectionView.cellForItem(at: indexPath) as! imageCollectionViewCell
         selectImage(selectedCell.image.image!)
     }
 }
