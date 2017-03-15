@@ -17,7 +17,7 @@ class ImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageButton.setImage(image, for: UIControlState.normal)
+        imageButton.setBackgroundImage(image, for: UIControlState.normal)
         navigationController?.isNavigationBarHidden = true
         tabBarController?.tabBar.isHidden = true
     }

@@ -11,6 +11,7 @@ import UIKit
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var feedTable: UITableView!
+//    var timeSent: Date?
     var imageToShow: UIImage?
     var currRow: Int?
     var currSection: Int?
@@ -25,6 +26,10 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        feedTable.reloadData()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -48,7 +53,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.readStatusImage.image = UIImage(named: "read")
         }
         cell.senderNameLabel.text = "Rexana"
-        cell.timeReceivedLabel.text = "1 min"
+//        cell.timeReceivedLabel.text = timeSent?.timeIntervalSinceNow.description
         return cell
     }
     
